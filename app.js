@@ -46,6 +46,36 @@ function playRound(computerChoice, humanChoice){
         }
     }
     else if(computerChoice === "paper"){
-        
+        if(humanChoice === "paper"){
+            console.log("It's a tie, try again");
+            console.log("Your score: ", humanScore);
+            console.log("Computer core: ", computerScore);
+        }else if(humanChoice === "scissor"){
+            humanScore++;
+            console.log("You Win! Scissor beats paper");
+            console.log("Your score: ", humanScore);
+            console.log("Computer core: ", computerScore);
+        }else{
+            computerScore++;
+            console.log("You lose! Paper beats rock");
+            console.log("Your score: ", humanScore);
+            console.log("Computer core: ", computerScore);
+        }
+    }else{
+        if(humanChoice === "paper"){
+            computerScore++
+            console.log("You lose! Scissor beats paper");
+            console.log("Your score: ", humanScore);
+            console.log("Computer core: ", computerScore);
+        }else if(humanChoice === "scissor"){
+            console.log("It's a tie! try again");
+            console.log("Your score: ", humanScore);
+            console.log("Computer core: ", computerScore);
+        }else{
+            humanScore++
+            console.log("You win! Rock beats scissor");
+            console.log("Your score: ", humanScore);
+            console.log("Computer core: ", computerScore);
+        }
     }
 }
