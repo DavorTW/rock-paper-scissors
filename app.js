@@ -74,8 +74,10 @@ function showWinner(string){
 function checkScore(computerScore, humanScore){
     if (computerScore > humanScore && computerScore === 5) {
         showWinner("You Lose!")
+        playAgain();
     }else if (computerScore < humanScore && humanScore === 5) {
         showWinner("You Win!");
+        playAgain();
     }
 }
 
@@ -84,6 +86,16 @@ function clearScreen() {
     if (div.childElementCount > 0) {
         div.textContent = '';
     }
+}
+
+function playAgain() {
+    const div = document.querySelector(".results");
+    const button = document.createElement("button");
+    button.textContent = "Play again";
+    div.appendChild(button);
+    button.addEventListener("click", () => {
+        clearScreen();
+    });
 }
 
 function playRound(computerChoice, humanChoice){
