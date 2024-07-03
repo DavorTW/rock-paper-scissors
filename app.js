@@ -67,6 +67,8 @@ function showWinner(string){
     para.classList.add("results");
     para.textContent = string;
     div.appendChild(para);
+    computerScore = 0;
+    humanScore = 0;
 }
 
 function checkScore(computerScore, humanScore){
@@ -77,19 +79,29 @@ function checkScore(computerScore, humanScore){
     }
 }
 
+function clearScreen() {
+    const div = document.querySelector(".results");
+    if (div.childElementCount > 0) {
+        div.textContent = '';
+    }
+}
+
 function playRound(computerChoice, humanChoice){
     if(computerChoice === "rock"){
         if(humanChoice === "paper"){
+            clearScreen();
             humanScore++;
             showResult("You win! Paper beats rock!");
             showScores("Human score is: ", "Computer score is: ");
             checkScore(computerScore, humanScore);
         }else if(humanChoice === "scissor"){
+            clearScreen();
             computerScore++;
             showResult("You Lose! Rock beats scissor!");
             showScores("Human score is: ", "Computer score is: ");
             checkScore(computerScore, humanScore);
         }else{
+            clearScreen();
             showResult("It's a tie, try again");
             showScores("Human score is: ", "Computer score is: ");
             checkScore(computerScore, humanScore);
@@ -97,15 +109,18 @@ function playRound(computerChoice, humanChoice){
     }
     else if(computerChoice === "paper"){
         if(humanChoice === "paper"){
+            clearScreen();
             showResult("It's a tie, try again.");
             showScores("Human score is: ", "Computer score is: ");
             checkScore(computerScore, humanScore);
         }else if(humanChoice === "scissor"){
+            clearScreen();
             humanScore++;
             showResult("Youw Win! Scissor beats paper");
             showScores("Human score is: ", "Computer score is: ");
             checkScore(computerScore, humanScore);
         }else{
+            clearScreen();
             computerScore++;
             showResult("You lose! Paper beats rock");
             showScores("Human score is: ", "Computer score is: ");
@@ -113,15 +128,18 @@ function playRound(computerChoice, humanChoice){
         }
     }else{
         if(humanChoice === "paper"){
+            clearScreen();
             computerScore++
             showResult("You lose! Scissor beats paper");
             showScores("Human score is: ", "Computer score is: ");
             checkScore(computerScore, humanScore);
         }else if(humanChoice === "scissor"){
+            clearScreen();
             showResult("It's a tie! try again");
             showScores("Human score is: ", "Computer score is: ");
             checkScore(computerScore, humanScore);
         }else{
+            clearScreen();
             humanScore++
             showResult("You win! Rock beats scissor");
             showScores("Human score is: ", "Computer score is: ");
