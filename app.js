@@ -42,7 +42,7 @@ buttons.forEach(button => {
 function showResult(text){
     const div = document.querySelector(".results");
     const result = document.createElement("p");
-    result.setAttribute("class", "results");
+    result.setAttribute("class", "results-content");
     result.textContent = text;
     div.appendChild(result);
 }
@@ -52,11 +52,11 @@ function showScores(text1, text2){
     const hScore = document.createElement("p");
     const cScore = document.createElement("p");
 
-    hScore.setAttribute("class", "results");
+    hScore.setAttribute("class", "results-content");
     hScore.textContent = `${text1} ${humanScore}`;
     div.appendChild(hScore);
 
-    cScore.classList.add("results");
+    cScore.classList.add("results-content");
     cScore.textContent = `${text2} ${computerScore}`;
     div.appendChild(cScore);
 }
@@ -64,7 +64,7 @@ function showScores(text1, text2){
 function showWinner(string){
     const div = document.querySelector(".results");
     const para = document.createElement("p");
-    para.classList.add("results");
+    para.classList.add("results-content");
     para.textContent = string;
     div.appendChild(para);
     computerScore = 0;
@@ -91,6 +91,7 @@ function clearScreen() {
 function playAgain() {
     const div = document.querySelector(".results");
     const button = document.createElement("button");
+    button.classList.add("btn","secondary");
     button.textContent = "Play again";
     div.appendChild(button);
     button.addEventListener("click", () => {

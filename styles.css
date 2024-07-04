@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: "Lato";
+}
+h1{
+    font-size: 4rem;
+    margin: 0%;
+}
+
+p{
+    margin: 0.5rem;
+}
+
+p, button{
+    font-size: 2rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.bg-color{
+    background-color: #efefd0;
+}
+
+.main-title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.buttons{
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.btn{
+    padding: 0.5rem 3rem;
+    border: none;
+    border-radius: 0.5rem;
+
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn.primary{
+    background-color: #ff6b35;
+}
+
+.btn.primary:hover{
+    background-color: #f7c59f;
+}
+
+.btn.secondary{
+    color: #fff;
+    background-color: #004e89;  
+    align-self: center; 
+}
+
+.btn.secondary:hover{
+    background-color: #1a659e;
+    
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+

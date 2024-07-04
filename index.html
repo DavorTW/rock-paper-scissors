@@ -3,15 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock-Paper-Scissors</title>
-        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="normalize.css" as="stylesheet">
+        <link rel="stylesheet" href="styles.css" as="stylesheet">
     </head>
 
-    <body>
-        <h1>PvC Rock-Paper-Scissors</h1>
+    <body class="container bg-color">
+        <h1 class="main-title">PvC Rock-Paper-Scissors</h1>
         <div class="buttons">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissor">Scissor</button>
+            <button class="btn primary" id="rock">Rock</button>
+            <button class="btn primary" id="paper">Paper</button>
+            <button class="btn primary" id="scissor">Scissor</button>
         </div>
 
         <div class="results"></div>
